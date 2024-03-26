@@ -27,7 +27,14 @@ Astroは、**ファイルベースルーティング**と呼ばれるルーテ�
 
 ### ページ間のリンク
 
-サイト内の別のページへリンクを張るには、HTML標準の[`<a>`要素](https://developer.mozilla.org/ja/docs/Web/HTML/Element/a)をコンポーネントテンプレートに記述してください。
+サイト内の別のページへリンクを張るには、HTML標準の[`<a>`要素](https://developer.mozilla.org/ja/docs/Web/HTML/Element/a)をコンポーネントテンプレートに記述してください。ここでは、相対ファイルパスではなく、ルートドメインからの相対URLパスをリンクとして使用してください。
+
+
+次の例は、`example.com`の他のページから`https://example.com/authors/sonali/`へのリンクの場合を表しています。
+
+```astro title="src/pages/index.astro"
+<a href="/authors/sonali/">Sonaliについて</a>さらに詳しくみる。
+```
 
 ## Astroページ
 
