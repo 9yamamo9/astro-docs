@@ -29,7 +29,6 @@ Astroは、**ファイルベースルーティング**と呼ばれるルーテ�
 
 サイト内の別のページへリンクを張るには、HTML標準の[`<a>`要素](https://developer.mozilla.org/ja/docs/Web/HTML/Element/a)をコンポーネントテンプレートに記述してください。ここでは、相対ファイルパスではなく、ルートドメインからの相対URLパスをリンクとして使用してください。
 
-
 次の例は、`example.com`の他のページから`https://example.com/authors/sonali/`へのリンクの場合を表しています。
 
 ```astro title="src/pages/index.astro"
@@ -53,6 +52,8 @@ Astroページは`.astro`拡張子を使い[Astroコンポーネント](/ja/basi
   </body>
 </html>
 ```
+
+ページは完全なHTMLドキュメントを作成しなければなりません。もし明示的に含まれていない場合、Astroはデフォルトで`src/pages`内にある`.astro`コンポーネントに、必要となる`<!DOCTYPE html>`宣言と`<head>`を追加します。
 
 すべてのページで同じHTML要素を繰り返すことを避けるために、共通の`<head>`と`<body>`要素を独自の[レイアウトコンポーネント](/ja/basics/layouts/)に移動できます。レイアウトコンポーネントはいくつでも使えます。
 
